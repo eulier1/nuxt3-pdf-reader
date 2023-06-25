@@ -1,10 +1,13 @@
 <template>
-    <div>
-        <v-pagination :length="6" class="elevation-6 pt-4 pb-4 pagination-container bg-grey-lighten-5"></v-pagination>
-        <div class="container">
-          <VuePdf v-for="page in numOfPages" :key="page" :src="pdfSrc" :page="page" />
-        </div>
+  <div>
+    <div class="flex justify-center p-8 bg-zinc-50 fixed w-screen top-8 z-10">
+      <pagination class=""></pagination>
     </div>
+
+    <div class="mt-40 ml-8 mr-8 mb-8">
+      <VuePdf v-for="page in numOfPages" :key="page" :src="pdfSrc" :page="page" />
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -16,26 +19,20 @@ const pdfSrc = ref<VuePdfPropsType['src']>('https://raw.githubusercontent.com/mo
 const numOfPages = ref(0)
 
 onMounted(() => {
-      const loadingTask = createLoadingTask(pdfSrc.value)
-      loadingTask.promise.then((pdf: PDFDocumentProxy) => {
-        numOfPages.value = pdf.numPages
-      })
-    })
+  const loadingTask = createLoadingTask(pdfSrc.value)
+  loadingTask.promise.then((pdf: PDFDocumentProxy) => {
+    numOfPages.value = pdf.numPages
+  })
+})
 
 
 </script>
 
 <style scoped>
-.container {
-  margin: 8rem 3rem;
-}
-
 .pagination-container {
   position: fixed;
   z-index: 99;
   width: 100%;
   top: 1rem
 }
-
-
 </style>
