@@ -1,6 +1,17 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 PDF Reader Demo
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Static [url](https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf ) for demo purpose 
+
+## Demo
+![demo-pdf-reader](https://i.imgflip.com/7qk64q.gif)
+## Tools
+- [Vue 3](https://vuejs.org/)
+- [Nuxt 3](https://nuxt.com/docs/getting-started/introduction)
+- [PdfJS](https://github.com/mozilla/pdf.js/)
+- [Vercel for Deployment](https://vercel.com)
+
+## Recording Process
+[Recording YouTube Process](https://www.youtube.com/watch?v=IBTHOI-5pFA&list=PL_sapWkWdZHFrE8Zx4Artkce_IXJm67jX)
 
 ## Setup
 
