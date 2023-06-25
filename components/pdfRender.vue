@@ -4,14 +4,14 @@
       <pagination class=""></pagination>
     </div>
 
-    <div class="mt-40 ml-8 mr-8 mb-8">
-      <VuePdf v-for="page in numOfPages" :key="page" :src="pdfSrc" :page="page" />
+    <div class="mt-40">
+      <VuePdf class="ml-8 mr-8 mb-8" v-for="page in numOfPages" :key="page" :src="pdfSrc" :page="page" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { VuePdf, createLoadingTask } from 'vue3-pdfjs';
+import { VuePdf, createLoadingTask } from 'vue3-pdfjs/esm';
 import { VuePdfPropsType } from 'vue3-pdfjs/components/vue-pdf/vue-pdf-props';
 import { PDFDocumentProxy } from 'pdfjs-dist/types/src/display/api';
 
@@ -28,11 +28,4 @@ onMounted(() => {
 
 </script>
 
-<style scoped>
-.pagination-container {
-  position: fixed;
-  z-index: 99;
-  width: 100%;
-  top: 1rem
-}
-</style>
+<style scoped></style>
