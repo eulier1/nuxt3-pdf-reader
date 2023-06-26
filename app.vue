@@ -1,6 +1,7 @@
 <template>
   <div>
-    <ClientOnly fallback-tag="span" fallback="Loading Component">
+    <loadDynamicUrlPDF></loadDynamicUrlPDF>
+    <ClientOnly v-if="false" fallback-tag="span" fallback="Loading Component">
       <pdf-render></pdf-render>
     </ClientOnly>
   </div>
