@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
+    "axios": "^1.4.0",
     "vue3-pdfjs": "^0.1.6"
   }
 }
