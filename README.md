@@ -1,7 +1,5 @@
 # Nuxt 3 PDF Reader Demo
 
-Static [url](https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf ) for demo purpose 
-
 ## Demo
 ![demo-pdf-reader](https://i.imgflip.com/7qvmkb.gif)
 ## Tools
