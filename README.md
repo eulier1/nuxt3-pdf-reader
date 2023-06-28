@@ -3,8 +3,9 @@
 Static [url](https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf ) for demo purpose 
 
 ## Demo
-![demo-pdf-reader](https://i.imgflip.com/7qk64q.gif)
+![demo-pdf-reader](https://i.imgflip.com/7qvmkb.gif)
 ## Tools
+- [Figma Design](https://www.figma.com/file/BRfRWjhLd09ILe8etocs72/Untitled?type=design&node-id=0-1&mode=design&t=cvbXPHYbGW1iTW72-0)
 - [Vue 3](https://vuejs.org/)
 - [Nuxt 3](https://nuxt.com/docs/getting-started/introduction)
 - [PdfJS](https://github.com/mozilla/pdf.js/)
