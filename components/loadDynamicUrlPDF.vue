@@ -32,26 +32,13 @@
 import axios from "axios";
 
 const emit = defineEmits<{
-    (e: 'loadingPercetage', percetage: number): void,
-    (e: 'submitted', isSubmit: boolean): void
+    (e: 'onURL', pdfURL: string): void
 }>()
 
 const pdfurl = ref("https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf")
-const loadingPercentage = ref(0)
-const pdfContent = ref(null)
 
 async function submit() {
-    loadingPercentage.value = 0
-
-    const response = await axios.get(pdfurl.value, {
-        onDownloadProgress: function (progressEvent) {
-            // Do whatever you want with the native progress event
-            emit('submitted', true)
-            loadingPercentage.value = Math.floor(progressEvent.loaded / progressEvent.total * 100)
-            emit('loadingPercetage', loadingPercentage.value)
-        },
-    })
-    pdfContent.value = response.data
+    emit('onURL', pdfurl.value)
 }
 
 </script>

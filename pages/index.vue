@@ -1,9 +1,15 @@
 <template>
   <div>
-    <loadDynamicUrlPDF v-show="!isSubmitted" @submitted="isLoading"
-      @loadingPercetage="(percentage) => loadingPercentage = percentage">
+
+    <loadDynamicUrlPDF v-if="!pdfurl" @onURL="(url) => pdfurl = url">
     </loadDynamicUrlPDF>
-    <loading v-show="isSubmitted" :progress="loadingPercentage"></loading>
+
+    <div v-else>
+      <ClientOnly fallback-tag="span" fallback="Loading Component">
+        <pdf-render :url="pdfurl"></pdf-render>
+      </ClientOnly>
+    </div>
+
   </div>
 </template>
 
@@ -12,13 +18,7 @@ import { ref, computed } from "vue";
 import Loading from "../components/loading.vue";
 import loadDynamicUrlPDF from "../components/loadDynamicUrlPDF.vue";
 
-const isSubmitted = ref(false)
-const loadingPercentage = ref(0)
-
-function isLoading(isSubmit) {
-  loadingPercentage.value = 0
-  isSubmitted.value = isSubmit
-}
+const pdfurl = ref(null)
 
 </script>
 
